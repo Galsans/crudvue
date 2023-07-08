@@ -19,7 +19,7 @@
                     v-model="mapel.guru"
                 />
             </div>
-            <div class="form-button">
+            <div class="form-button mt-2">
                 <button type="submit" v-if="isNewMapel" class="btn btn-primary">
                     SEND
                 </button>

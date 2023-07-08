@@ -5,7 +5,7 @@
         <h5 id="associating-form-text-with-form-controls">Kelas:</h5>
         <p>{{ murid.kelas }}</p>
         <h5 id="associating-form-text-with-form-controls">Jurusan:</h5>
-        <p>Price: {{ murid.jurusan }}</p>
+        <p>{{ murid.jurusan }}</p>
         <router-link :to="`/murids/${murid.id}/edit`" class="btn btn-primary"
             >Edit</router-link
         >

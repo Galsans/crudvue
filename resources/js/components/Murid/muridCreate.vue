@@ -1,42 +1,48 @@
 <template>
     <div class="container">
-        <form @submit.prevent="submitForm">
-            <div class="form-group">
-                <label for="">Nama</label>
-                <input
-                    type="text"
-                    id="nama"
-                    class="form-control"
-                    v-model="murid.nama"
-                />
-            </div>
-            <div class="form-group">
-                <label for="">Kelas</label>
-                <input
-                    type="text"
-                    id="kelas"
-                    class="form-control"
-                    v-model="murid.kelas"
-                />
-            </div>
-            <div class="form-group">
-                <label for="">Jurusan</label>
-                <input
-                    type="text"
-                    id="jurusan"
-                    class="form-control"
-                    v-model="murid.jurusan"
-                />
-            </div>
-            <div class="form-button">
-                <button type="submit" v-if="isNewMurid" class="btn btn-primary">
-                    SEND
-                </button>
-                <button type="submit" v-else class="btn btn-primary">
-                    UPDATE
-                </button>
-            </div>
-        </form>
+        <div class="card-body">
+            <form @submit.prevent="submitForm">
+                <div class="form-group">
+                    <label for="">Nama</label>
+                    <input
+                        type="text"
+                        id="nama"
+                        class="form-control"
+                        v-model="murid.nama" required
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="">Kelas</label>
+                    <input
+                        type="text"
+                        id="kelas"
+                        class="form-control"
+                        v-model="murid.kelas" required
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="">Jurusan</label>
+                    <input
+                        type="text"
+                        id="jurusan"
+                        class="form-control"
+                        v-model="murid.jurusan" required
+                    />
+                </div>
+                <div class="form-button">
+                    <button
+                        type="submit"
+                        v-if="isNewMurid"
+                        class="btn btn-primary"
+                    >
+                        SEND
+                    </button>
+                    <button type="submit" v-else class="btn btn-primary">
+                        UPDATE
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 </template>
 
